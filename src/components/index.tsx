@@ -11,7 +11,6 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 const photoCategories = {
   street: [
     { id: 1, src: "/images/img1.jpg", alt: "Street photography", width: 300, height: 400 },
-    { id: 2, src: "/images/img2.jpg", alt: "Street photography ", width: 400, height: 500 },
     { id: 3, src: "/images/img3.jpeg", alt: "Street photography ", width: 400, height: 300 },
     { id: 4, src: "/images/img4.jpg", alt: "Street photography ", width: 400, height: 600 },
     { id: 5, src: "/images/img5.jpg", alt: "Street photography ", width: 300, height: 400 },
