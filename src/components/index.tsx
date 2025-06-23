@@ -1,4 +1,7 @@
 "use client"
+
+import { ImageZoom } from '@/components/ui/image-zoom/image-zoom';
+import { cn } from "@/lib/utils";
 import Image from "next/image"
 import { Camera, Instagram, Mail, MapPin } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -49,14 +52,6 @@ const photoCategories = {
     { id: 40, src: "/images/img18.jpg", alt: "Street photography ", width: 350, height: 500 },
   ],
   people: [
-    { id: 1, src: "/images/img1.jpg", alt: "Street photography", width: 300, height: 400 },
-    { id: 2, src: "/images/img2.jpg", alt: "Street photography ", width: 400, height: 500 },
-    { id: 3, src: "/images/img3.jpeg", alt: "Street photography ", width: 400, height: 300 },
-    { id: 4, src: "/images/img4.jpg", alt: "Street photography ", width: 400, height: 600 },
-    { id: 5, src: "/images/img5.jpg", alt: "Street photography ", width: 300, height: 400 },
-    { id: 6, src: "/images/img6.jpg", alt: "Street photography ", width: 350, height: 500 },
-    { id: 7, src: "/images/img7.jpg", alt: "Street photography ", width: 300, height: 400 },
-    { id: 8, src: "/images/img8.jpg", alt: "Street photography ", width: 400, height: 500 },
     { id: 9, src: "/images/img9.jpg", alt: "Street photography ", width: 400, height: 300 },
     { id: 10, src: "/images/img10.jpg", alt: "Street photography ", width: 400, height: 600 },
     { id: 11, src: "/images/img11.jpg", alt: "Street photography ", width: 300, height: 400 },
@@ -242,6 +237,8 @@ export default function PhotographerPortfolio() {
                       key={photo.id}
                       className="group relative overflow-hidden bg-gray-900 hover:scale-105 transition-transform duration-500 cursor-pointer break-inside-avoid mb-2 sm:mb-2"
                     >
+                    <ImageZoom
+                    backdropClassName={cn('[&_[data-rmiz-modal-overlay="visible"]]:bg-black/80')}> 
                       <Image
                         src={photo.src || "/placeholder.svg"}
                         alt={photo.alt}
@@ -249,10 +246,12 @@ export default function PhotographerPortfolio() {
                         height={photo.height}
                         className="w-full h-auto object-contain group-hover:opacity-80 transition-opacity duration-300"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        unoptimized
                         // priority={photo.id <= 6}
                         // priority={true}
                       />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                      </ImageZoom>
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 pointer-events-none" />
                     </div>
                   ))}
                 </div>
