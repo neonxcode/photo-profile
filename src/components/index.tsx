@@ -50,6 +50,7 @@ const photoCategories = {
     { id: 39, src: "/images/img17.jpg", alt: "Street photography ", width: 300, height: 400 },
     { id: 40, src: "/images/img18.jpg", alt: "Street photography ", width: 350, height: 500 },
   ],
+//   neonxcode
   people: [
     { id: 9, src: "/images/img9.jpg", alt: "Street photography ", width: 400, height: 300 },
     { id: 10, src: "/images/img10.jpg", alt: "Street photography ", width: 400, height: 600 },
