@@ -262,7 +262,10 @@ export default function PhotographerPortfolio() {
       </main>
 
       {/* About Me Button - Fixed at bottom center */}
-      <div className="fixed bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-50">
+      <div 
+    //   className="fixed bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-50" 
+      className="fixed bottom-4 sm:bottom-6 md:bottom-9 left-1/2 transform -translate-x-1/2 z-50" 
+      >
         <Dialog>
           <DialogTrigger asChild>
             <Button
