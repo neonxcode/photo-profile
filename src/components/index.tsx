@@ -264,14 +264,14 @@ export default function PhotographerPortfolio() {
       {/* About Me Button - Fixed at bottom center */}
       <div 
     //   className="fixed bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-50" 
-      className="fixed bottom-4 sm:bottom-6 md:bottom-9 left-1/2 transform -translate-x-1/2 z-50" 
+      className="fixed bottom-4 sm:bottom-4 md:bottom-10 left-1/2 transform -translate-x-1/2 z-40" 
       >
         <Dialog>
           <DialogTrigger asChild>
             <Button
               variant="outline"
             //   className="bg-black/90 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full font-light tracking-widest text-xs sm:text-sm"
-                 className="bg-black/90 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 px-8 sm:px-10 md:px-12 py-4 sm:py-5 rounded-full font-light tracking-widest text-lg sm:text-xl"
+                 className="bg-black/90 backdrop-blur-sm border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 px-8 sm:px-10 md:px-12 py-4 sm:py-5 rounded font-light tracking-widest text-lg sm:text-xl"
             >
               ABOUT ME
             </Button>
