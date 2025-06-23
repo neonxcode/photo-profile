@@ -4,6 +4,7 @@ import { Camera, Instagram, Mail, MapPin } from "lucide-react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { ImageZoom } from '@/components/ui/kibo-ui/image-zoom/index';
 
 const photoCategories = {
   street: [
@@ -241,7 +242,9 @@ export default function PhotographerPortfolio() {
                     <div
                       key={photo.id}
                       className="group relative overflow-hidden bg-gray-900 hover:scale-105 transition-transform duration-500 cursor-pointer break-inside-avoid mb-2 sm:mb-2"
+                     
                     >
+                    <ImageZoom>
                       <Image
                         src={photo.src || "/placeholder.svg"}
                         alt={photo.alt}
@@ -249,10 +252,13 @@ export default function PhotographerPortfolio() {
                         height={photo.height}
                         className="w-full h-auto object-contain group-hover:opacity-80 transition-opacity duration-300"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                        priority={photo.id <= 6}
+                        // priority={photo.id <= 6}
+                      // priority={true}
                       />
+                    </ImageZoom>
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                     </div>
+                   
                   ))}
                 </div>
               </TabsContent>
