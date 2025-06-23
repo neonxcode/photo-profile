@@ -276,7 +276,7 @@ export default function PhotographerPortfolio() {
           <DialogContent className="bg-black border-gray-800 text-white max-w-[95vw] sm:max-w-lg md:max-w-2xl max-h-[90vh] overflow-y-auto sm:mx-4">
             <DialogHeader>
               <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-light tracking-widest text-center mb-4 sm:mb-6 md:mb-8">
-                neoxcode
+                neonxcode
               </DialogTitle>
             </DialogHeader>
             <div className="space-y-4 sm:space-y-6 px-2 sm:px-4">
